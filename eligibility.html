@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Eligibility</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header><a class="logo" href="/">SAHAYAK <b>AI</b></a>
+        <nav><a href="/">Home</a>
+            <a href="/ai-manager">AI Manager</a>
+            <a href="/document-engine">OCR Engine</a>
+        </nav>
+    </header>
+    <main class="wrap page">
+            <p class="tag">FEATURE 02</p>
+            <h1>Scheme Eligibility Engine</h1>
+            <p class="muted">The results are possible matches based on prototype rules. Always verify on the official portal.</p>
+            <section class="panel">
+                <div class="formgrid">
+                    <div>
+                        <label>Name</label>
+                        <input id="name">
+                        <label>Age</label>
+                        <input id="age" type="number">
+                        <label>Category</label>
+                        <select id="category">
+                            <option value="">Select</option>
+                            <option>SC</option>
+                            <option>ST</option>
+                            <option>OBC</option>
+                            <option>EWS</option>
+                            <option>GENERAL</option>
+                        </select>
+                        <label>Education</label>
+                        <select id="education">
+                            <option value="">Select</option>
+                            <option>School Student</option>
+                            <option>College Student</option>
+                            <option>Graduate</option>
+                        </select></div>
+                            <div><label>Annual Income ₹</label>
+                                <input id="income" type="number">
+                                <label>State</label>
+                                <input id="state">
+                                <label>District</label>
+                                <input id="district">
+                            </div>
+                            </div>
+                            <button class="btn yellow" onclick="checkEligibility()">Check Possible Matches</button></section>
+                            <section id="results"></section>
+                        </main>
+                        <footer>SAHAYAK AI</footer>
+                        <script src="/static/script.js"></script>
+</body>
+</html>

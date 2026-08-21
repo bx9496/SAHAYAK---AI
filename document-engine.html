@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>OCR Engine</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="/">SAHAYAK <b>AI</b></a>
+            <nav><a href="/">Home</a>
+                <a href="/ai-manager">AI Manager</a>
+                <a href="/eligibility">Eligibility</a>
+            </nav>
+        </header>
+        <main class="wrap page">
+            <p class="tag">FEATURE 03</p>
+            <h1>OCR + ReCorrect Engine</h1>
+            <div class="two">
+                <section class="panel">
+                    <h3>1. Upload Document</h3>
+                    <input id="file" type="file" accept="image/*,.pdf">
+                    <button class="btn blue" onclick="runOCR()">Extract with OCR</button>
+                    <p id="ocrStatus" class="muted"></p>
+                    <label>Extracted Text</label>
+                    <textarea id="ocrText" rows="14" placeholder="OCR result will appear here"></textarea></section>
+                    <section class="panel">
+                        <h3>2. Review & Correct</h3>
+                        <div class="formgrid">
+                            <div>
+                                <label>Name</label>
+                                <input id="name">
+                                <label>Guardian Name</label>
+                                <input id="guardian">
+                                <label>Age</label>
+                                <input id="age" type="number">
+                                <label>Category</label>
+                                <select id="category">
+                                    <option value="">Select</option>
+                                    <option>SC</option>
+                                    <option>ST</option>
+                                    <option>OBC</option>
+                                    <option>EWS</option>
+                                    <option>GENERAL</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Income ₹</label>
+                                <input id="income" type="number">
+                                <label>State</label>
+                                <input id="state">
+                                <label>District</label>
+                                <input id="district">
+                                <label>Education</label>
+                                <select id="education">
+                                    <option value="">Select</option>
+                                    <option>School Student</option>
+                                    <option>College Student</option>
+                                    <option>Graduate</option>
+                                </select>
+                                </div>
+                            </div>
+                            <button class="btn yellow" onclick="recorrect()">Run ReCorrect</button>
+                            <button class="btn blue" onclick="saveProfile()">Save Profile</button>
+                            <div id="quality">
+                            </div>
+                        </section>
+                    </div>
+                </main>
+                <footer>SAHAYAK AI</footer>
+                <script src="/static/script.js">
+                </script>
+</body>
+</html>
