@@ -1,25 +1,135 @@
-# SAHAYAK AI Integrated Prototype
+# 🇮🇳 SAHAYAK AI
 
-A single Flask website integrating Login + KYC, Dark/Light theme, AI Government Life Manager, OCR + ReCorrect, Scheme Eligibility, profile storage and reminders.
+### Your Personal Government Life Admin
 
-## Run
-python -m venv .venv
-.venv\\Scripts\\activate
-pip install -r requirements.txt
-copy .env.example .env
-python app.py
+SAHAYAK AI is a GovTech platform designed to simplify government paperwork, scheme discovery, document processing, and citizen support through AI-powered assistance.
 
-Open http://127.0.0.1:5000
+Built for **HACQUIRE 2026** under:
 
-## Render
-Build: pip install -r requirements.txt
-Start: gunicorn app:app
+**Problem Statement PS-10: Paperwork & Access**  
+**Domain: GovTech / Inclusion**
 
-Set OPENAI_API_KEY, OPENAI_MODEL, FLASK_SECRET_KEY.
+---
 
-OCR uses Tesseract.js in the browser, so no Google Vision credentials are required for the demo.
-SQLite is used for the hackathon prototype. Use managed PostgreSQL for production.
+## 🎯 Problem Statement
 
+Government forms, schemes, claims, and documents are often difficult to understand and navigate due to:
 
-## Multilingual + database update
-SQLite now stores users, KYC metadata, profiles, reminders, OCR scans and emergency contacts. OCR supports English (`eng`), Hindi (`hin`) and Odia (`ori`). Extracted OCR can be translated to English, Hindi or Odia using the OpenAI API when configured. OCR text and translations are saved per logged-in user. Emergency contact and optional medical notes are stored per user. For real deployment, use managed PostgreSQL, HTTPS, encryption, access controls and an authorized KYC provider.
+- Complex paperwork
+- Eligibility confusion
+- Language barriers
+- Missing documentation
+- Lack of guidance
+- Missed deadlines
+
+SAHAYAK AI provides a single platform that helps citizens understand, process, and access government services more easily.
+
+---
+
+## 🚀 Core Features
+
+### 🤖 AI Government Life Manager
+An AI-powered assistant that helps users:
+
+- Understand government procedures
+- Get document guidance
+- Receive personalized recommendations
+- Manage reminders and important tasks
+- Access citizen support information
+
+---
+
+### 🎯 Scheme Eligibility Engine
+Users can enter their:
+
+- Age
+- Category
+- Income
+- Education
+- State
+- District
+
+The system evaluates potential scheme eligibility and recommends relevant government benefits.
+
+---
+
+### 📄 OCR + ReCorrect Engine
+
+Upload documents and automatically:
+
+- Extract text using OCR
+- Detect important information
+- Correct extracted data
+- Save document history
+- Translate content
+
+### 🌐 Multilingual Support
+
+Supported languages:
+
+- English
+- Hindi
+- Odia
+
+Document text can be translated between all supported languages.
+
+---
+
+### 🚨 Emergency Contact & Medical Support
+
+Users can securely store:
+
+- Emergency contact details
+- Relationship information
+- Phone numbers
+- Essential medical information
+
+---
+
+## 🔐 Login & KYC
+
+SAHAYAK AI includes:
+
+- User Registration
+- Secure Login
+- Session Management
+- KYC Metadata Storage
+- User Profile Management
+
+Login is required before accessing platform services.
+
+---
+
+## 💾 Database Features
+
+The platform stores:
+
+- User Accounts
+- User Profiles
+- KYC Metadata
+- OCR Scan History
+- Translated Documents
+- Emergency Contacts
+- Reminders
+
+SQLite is used for the hackathon prototype.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Login & KYC
+      │
+      ▼
+SAHAYAK Dashboard
+      │
+ ┌────┼────┐
+ │    │    │
+ ▼    ▼    ▼
+AI  OCR  Eligibility
+Mgr Engine Engine
+ │    │    │
+ └────┼────┘
+      ▼
+   Database
